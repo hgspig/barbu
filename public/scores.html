@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Scores</title>
 
-    <script src="about.js"></script>
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="scores.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -28,44 +27,36 @@
             <a class="nav-link" href="play.html">Play</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="scores.html">Scores</a>
+            <a class="nav-link active" href="scores.html">Scores</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="about.html">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
         </menu>
       </nav>
     </header>
 
     <main class="container-fluid bg-secondary text-center">
-      <div>
-        <div id="picture" class="picture-box"></div>
-
-        <p>
-          Simon is a repetitive memory game where you follow the demonstrated
-          color sequence until you make a mistake. The longer the sequence you
-          repeat, the greater your score.
-        </p>
-
-        <p>
-          The name Simon is a registered trademark of Milton-Bradley. Our use of
-          the name and the game is for non-profit educational use only. No part
-          of this code or program should be used outside of that definition.
-        </p>
-
-        <div id="quote" class="quote-box bg-light text-dark"></div>
-      </div>
+      <table class="table table-warning table-striped-columns">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="scores"></tbody>
+      </table>
     </main>
 
     <footer class="bg-dark text-dark text-muted">
       <div class="container-fluid">
         <span class="text-reset">Author Name(s)</span>
-        <a
-          class="text-reset"
-          href="https://github.com/webprogramming260/simon-login"
-          >Source</a
-        >
+        <a class="text-reset" href="https://github.com/webprogramming260/simon-login">Source</a>
       </div>
     </footer>
+
+    <script src="scores.js"></script>
   </body>
 </html>
