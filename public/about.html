@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Eo_circle_green_white_checkmark.svg/2048px-Eo_circle_green_white_checkmark.svg.png"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="overflowfix cards-footer">
+    <nav class="first-color navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="list.html">To-Do</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="stats.html"
+                >Stats</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html"
+                >About</a
+              >
+            </li>
+          </ul>
+          <a class="btn btn-dark btn-lg btn-block" href="index.html">Account</a>
+        </div>
+      </div>
+    </nav>
+    <script language="javascript">
+      const [toggle] = document.getElementsByClassName("navbar-toggler");
+      toggle.addEventListener("click", () => {
+        document
+          .getElementById("navbarSupportedContent")
+          .classList.toggle("show");
+      });
+    </script>
+    <script src="about.js"></script>
+
+    <section class="">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="row py-4 col-xl-10">
+            <div
+              class="shadow-lg card second-color"
+              style="border-radius: 1rem"
+            >
+              <div class="row g-0">
+                <div class="d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-5 text-black">
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <span class="h1 fw-bold mb-0">Our mission</span>
+                    </div>
+
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                      Our mission is to help students keep track of what they
+                      need to do each day. Our design is simple in order to keep
+                      distractions low and productivity high. Notifications to
+                      and from peers when tasks are created or completed
+                      increase accountability and motivation. Ultimately we are
+                      providing a way for students to stay on task, become more
+                      productive and get more done in less time.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row py-4 col-xl-10">
+            <div
+              class="shadow-lg card second-color"
+              style="border-radius: 1rem"
+            >
+              <div class="row g-0">
+                <div class="d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-3 text-black">
+                    <div id="quote" class="quote-box"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="navbar-fixed-bottom footer footerflex text-center"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+      <!-- Copyright -->
+      <div class="text-lg-start p-3">© 2023 Hannah Spigarelli</div>
+      <div class="text-lg-end">
+        <a class="text-dark" href="https://github.com/hgspig/startup"
+          >Source
+        </a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>

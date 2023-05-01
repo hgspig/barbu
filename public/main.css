@@ -1,0 +1,180 @@
+.first-color {
+  background-color: #918FFF;
+}
+.second-color {
+    background-color: #FF9D82;
+}
+
+.third-color {
+    background-color: #5DDDE8;
+}
+.min-height {
+    min-height: 90vh; /* with calc function subtract the header height */
+}
+.footerflex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: auto;
+    width : 100vw;
+}
+@media (max-width: 768px) {
+    .footerflex {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: auto;
+    }
+    .removescrolling-sm {
+        height:83vh; 
+    }
+}
+    
+ @media (min-width: 768px){
+    .removescrolling {
+         height:83vh; 
+    }
+}
+.progresscardflex {
+    max-width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media (min-height: 800px) { 
+    /* height:120vh; add a tag */
+    img {
+        animation-duration: 100ms;
+    }
+}
+.done {
+    color: #c4c3c2;
+    text-decoration: line-through;
+}
+.delete {
+    display: none!important;
+}
+.deleteButton {
+	background: none;
+	border: none;
+	float: right;
+	color: black;
+	font-weight: 400;
+    font-size: .9em;
+}
+.cards-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height : 100vh;
+}
+.login-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height : 100vh;
+    /* align-items: center; */
+}
+.center-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height : 100vh;
+    align-items: center;
+}
+
+.author::before {
+    content: " - ";
+  }
+
+.footer-color {
+    background-color: #A7A7A7;
+}
+.content {
+    display: flex;
+}
+.todo-cards{
+    flex:4;
+}
+.websocket-notifications {
+    flex:20px;
+}
+
+/* bouncing emoji  */
+
+img{
+    width:40px;
+    position:relative;
+    animation-name: myAnimation;
+    animation-duration: 10000ms;
+    /* animation-duration: 90vw/1000ms*1vw; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes myAnimation{
+    0% { 
+        transform: rotate(0deg);
+        left:0; top: 0 }
+    10% { 
+        left:20%;
+        /* top: 50px;         */
+    }
+    20% {
+        left:40%;
+        /* top:200px;         */
+    }
+    30% {
+        left: 60%;
+        /* top: 100px; */
+    }
+    40% {
+        left: 80%;
+        /* top: 50px; */
+    }
+    50% { 
+        transform: rotate(360deg);
+        left: 95%;
+        /* top: 0; */
+    }
+    60% {
+        left: 80%;
+        /* top: 50px; */
+    }
+    70% {
+        left: 60%;
+        /* top: 200px; */
+    }
+    80% {
+        left: 40%;
+        /* top: 100px; */
+    }
+    90% {
+        left: 20%;
+        /* top: 50px; */
+    }
+    100%{
+        transform: rotate(0deg);
+        left:0;    
+        /* top:0;   */
+    }
+} 
+
+/* @media (max-width: 768px) {
+    img{
+        width:40px;
+        position:relative;
+        animation-name: myAnimation;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+} */
+
+.overflowfix {
+    overflow-x: hidden;
+}

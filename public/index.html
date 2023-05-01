@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Eo_circle_green_white_checkmark.svg/2048px-Eo_circle_green_white_checkmark.svg.png"
+    />
+
+    <!-- <link
+      rel="icon"
+      href="data:image/png;base64,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"
+    /> -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <div class="overflowfix cards-footer">
+    <body>
+      <div class="login-footer">
+        <nav class="first-color navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand loginValid" href="index.html">To-Do</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+              <a class="btn btn-dark btn-lg btn-block" href="index.html"
+                >Account</a
+              >
+            </div>
+          </div>
+        </nav>
+        <script language="javascript">
+          const [toggle] = document.getElementsByClassName("navbar-toggler");
+          toggle.addEventListener("click", () => {
+            document
+              .getElementById("navbarSupportedContent")
+              .classList.toggle("show");
+          });
+        </script>
+        <!-- <section class="removescrolling-sm removescrolling"> -->
+        <section class="content center-login">
+          <div class="container py-5 h-100">
+            <div
+              class="row d-flex justify-content-center align-items-center h-100"
+            >
+              <div id="loginControls" style="display: none">
+                <div class="col col-xl-10">
+                  <div
+                    class="shadow-lg card second-color"
+                    style="border-radius: 1rem"
+                  >
+                    <div class="row g-0">
+                      <div class="d-flex align-items-center">
+                        <div class="card-body p-4 p-lg-5 text-black">
+                          <!-- <form id="form"> -->
+                          <div class="d-flex align-items-center mb-3 pb-1">
+                            <i
+                              class="fas fa-cubes fa-2x me-3"
+                              style="color: #ff6219"
+                            ></i>
+                            <span class="h1 fw-bold mb-0">Login</span>
+                          </div>
+
+                          <h5
+                            class="fw-normal mb-3 pb-3"
+                            style="letter-spacing: 1px"
+                          >
+                            Sign into your account or make a new account
+                          </h5>
+
+                          <div class="input-group mb-4">
+                            <!-- <span class="input-group-text">@</span> -->
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="userName"
+                              placeholder="Username or Email"
+                            />
+                          </div>
+                          <div class="form-outline input-group mb-3">
+                            <!-- <span class="input-group-text">🔒</span> -->
+                            <!-- <span class="input-group-text"></span> -->
+
+                            <input
+                              class="form-control"
+                              type="password"
+                              id="userPassword"
+                              placeholder="Password"
+                            />
+                          </div>
+                          <button
+                            type="button"
+                            class="btn footer-color btn-lg btn-block background-color: rgba(0, 0, 0, 0.2)"
+                            onclick="loginUser()"
+                          >
+                            <span id="third-color">Login</span>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn footer-color btn-lg btn-block"
+                            onclick="createUser()"
+                          >
+                            Create
+                          </button>
+                          <!-- <div id="playControls" style="display: none">
+                        <div id="playerName"></div>
+                        <button
+                          type="button"
+                          class="btn footer-color btn-lg btn-block"
+                          onclick="startTasks()"
+                        >
+                          Make tasks
+                        </button>
+                        <button
+                          type="button"
+                          class="btn footer-color btn-lg btn-block"
+                          onclick="logout()"
+                        >
+                          Logout
+                        </button>
+                      </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="playControls" style="display: none">
+                <div class="col col-xl-10">
+                  <div
+                    class="shadow-lg card second-color"
+                    style="border-radius: 1rem"
+                  >
+                    <div class="row g-0">
+                      <div class="d-flex align-items-center">
+                        <div class="card-body p-4 p-lg-5 text-black">
+                          <!-- <form id="form"> -->
+                          <div class="d-flex align-items-center mb-3 pb-1">
+                            <!-- <i
+                          class="fas fa-cubes fa-2x me-3"
+                          style="color: #ff6219"
+                        ></i> -->
+                            <span class="h1 fw-bold mb-0"
+                              >You are logged in as
+                              <span id="playerName"></span>
+                            </span>
+                          </div>
+                          <h5
+                            class="fw-normal mb-3 pb-3"
+                            style="letter-spacing: 1px"
+                          >
+                            Go make some goals or log out
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn footer-color btn-lg btn-block"
+                            onclick="startTasks()"
+                          >
+                            Make tasks
+                          </button>
+                          <button
+                            type="button"
+                            class="btn footer-color btn-lg btn-block"
+                            onclick="logout()"
+                          >
+                            Logout
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <main class="container-fluid bg-secondary text-center"> -->
+
+        <!-- Displayed when ready to play -->
+        <div id="playControls" style="display: none">
+          <div class="col col-xl-10">
+            <div
+              class="shadow-lg card second-color"
+              style="border-radius: 1rem"
+            >
+              <div class="row g-0">
+                <div class="d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-5 text-black">
+                    <!-- <form id="form"> -->
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <i
+                        class="fas fa-cubes fa-2x me-3"
+                        style="color: #ff6219"
+                      ></i>
+                      <span class="h1 fw-bold mb-0"
+                        >You are logged in as
+                        <span id="playerName"></span>
+                      </span>
+                    </div>
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                      Go make some goals or log out
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn footer-color btn-lg btn-block"
+                      onclick="startTasks()"
+                    >
+                      Make tasks
+                    </button>
+                    <button
+                      type="button"
+                      class="btn footer-color btn-lg btn-block"
+                      onclick="logout()"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error dialog -->
+        <div class="modal fade" id="msgModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+              <div class="modal-body">error message here</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer
+          class="footerflex text-center"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          <!-- Copyright -->
+          <div class="text-lg-start p-3">© 2023 Hannah Spigarelli</div>
+          <div class="text-lg-end">
+            <a class="text-dark" href="https://github.com/hgspig/startup"
+              >Source
+            </a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      </div>
+      <script src="login.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </div>
+</html>
